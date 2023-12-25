@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Personal Portfolio Website -Prerna Patil</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!-- header started -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <h2><span style="color:blue"></span></h2>
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="https://www.youtube.com/channel/UC_5YIfjBNGLQ41DxFrEjpzg">Videos</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact"><i class="fa fa-github" style="font-size:24px;color:white"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/prerna-patil-2b885527b" target="_blank"><i
+                class="fa fa-linkedin-square" style="font-size:26px;color:blue"></i></a></li>
+
+        </ul>
+      </nav>
+    </div>
+    <div class="header-text" style=" text-align:'right'; margin-top:110px; margin-left:90px">
+      <p>UI/UX Designer</p>
+      <h1>Hello,I'm Prerna</h1>
+    </div>
+  </div>
+  <!-- header ended -->
+  <!-- about started -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/myimg.jpeg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Aspiring MCA Student and Passionate UI/UX Developer Welcome to my digital space! I'm Prerna Patil, a
+            dedicated MCA student with a relentless curiosity for programming and a fervent passion for crafting
+            seamless user experiences. As
+            I journey through the dynamic world of technology, my enthusiasm to learn and innovate in the realm of UI/UX
+            development propels me forward.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+              <li><span>Web Development</span><br>Web app Development</li>
+              <li><span>App Development</span><br>Building Android/iOS apps</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2021-2024</span><br>BCA from IIPS</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about ended -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <table width='100%' border='0' cellpadding='0' cellspacing='0'>
+        <tbody>
+          <tr>
+            <td>
+              <div class="video">
+                <a href="https://www.youtube.com/watch?v=W-b7melCSyc&t=3s" target="_blank">
+                  <img src="./images/YouTube Thumbnail 1280x720 px.jpeg"
+                    alt="What is partial pivoting? Write pivotal condensation algorithm.">
+                </a>
+              </div>
+            </td>
+            <td>
+              <div class="video">
+                <a href="https://www.youtube.com/watch?v=BGa5xz6o4yY&t=40s" target="_blank">
+                  <img src="./images/YouTube Thumbnail 1280x720 px.jpeg" alt="Example of Gauss-Jordan Method">
+                </a>
+              </div>
+            </td>
+            <td>
+              <div class="video">
+                <a href="https://www.youtube.com/watch?v=sX5w6AjOkcQ&t=15s" target="_blank">
+                  <img src="./images/YouTube Thumbnail 1280x720 px.jpeg"
+                    alt="Explain refinement solution of ILL-Conditioned Equations">
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <a href="https://www.youtube.com/channel/UC_5YIfjBNGLQ41DxFrEjpzg" target="_blank">
+      <button type="button" class="view-button" style="margin-left:85%;">View all...</button>
+    </a>
+
+  </div>
+
+  <!-- contact us // started-->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa fa-envelope" style="font-size:24px;color:red"></i> prernapatil060@gmail.com</p>
+        </div>
+        <div class="contact-right">
+          <form>
+            <input type="text" id="name" name="Name" placeholder="Your Name" required>
+            <input type="email" id="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" id="message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2" value="Submit" onclick="submitForm()">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>For any inquiries regarding the use or reproduction of content from this website, please contact.
+      </p>
+    </div>
+  </div>
+  <!-- contact us // end-->
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+</body>
+
+</html>
